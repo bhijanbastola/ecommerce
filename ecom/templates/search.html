@@ -8,9 +8,13 @@
 <h1>Welcome to the E-commerce Site</h1>
 <h2>serach result</h2>
 {% if products %}
-    <ul>
+    <li>
         {% for product in products %}
-            <a href="{% url "product_list" %}"><li>{{ product.name }}</li></a>
+        <li>   
+        <a href="{% url "product_list" %}"><img src="{{ product.image.url }}" alt="{{ product.name }}" width="200"></a>
+
+            <a href="{% url "product_list" %}">{{ product.name }}-{{product.image.url}}</a>
+    </li>
         {% endfor %}
     </ul>
 {% else %}
