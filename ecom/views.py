@@ -74,3 +74,14 @@ def register(request):
         
 
     return render(request, 'registrations/register.html', {'form': form})
+
+
+def search_product(request):
+    query = request.GET.get('search')
+    if query:
+        products = Product.objects.filter(name__icontains=query)
+    else:
+        products = Product.objects.all()
+    
+    return render(request, 'search.html', {'query': query, 'products': products})
+

@@ -10,6 +10,7 @@ urlpatterns = [
     path("edit_product/<int:id>/", views.edit_product, name='edit_product'),
     path("delete_product/<int:id>/", views.delete_product, name='delete_product'),
     path("register/", views.register, name='register'),
+    path("ecom/search/", views.search_product, name='search_product'),
     path("index/", views.index, name='index'),
 
 ]

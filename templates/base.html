@@ -43,8 +43,9 @@
           <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
         </li>
       </ul>
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      <form method ="get" action="{% url "search_product" %}" class="d-flex">
+        {% csrf_token %}
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="search" id="search">
         <button class="btn btn-outline-success" type="submit">Search</button>
       </form>
       <a href="{% url "product_list" %}" class="btn btn-primary">HomePage</a>
