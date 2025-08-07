@@ -41,6 +41,7 @@ class Product(models.Model):
         ('books', 'Books'),
         ('toys', 'Toys'), 
     ]
+    user = models.ForeignKey(User, on_delete=models.CASCADE,null=True, blank=True)
     type = models.CharField(max_length=50, choices=CATEGORIES, default='electronics')
     name = models.CharField(max_length=200)
     description = models.TextField()

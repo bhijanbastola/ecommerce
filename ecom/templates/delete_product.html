@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}
+
+{% endblock title %}
+
+{% block content %}
+<h1>Welcome to the E-commerce Site</h1>
+<h1>Are u sure u want to delete this??</h1>
+<form action="" method="post">
+    <button class="btn btn-danger">Delete</button>
+    <a href="{% url 'product_list' %}" class="btn btn-secondary">Back</a>
+    {% csrf_token %}
+</form>
+{% endblock content %}
