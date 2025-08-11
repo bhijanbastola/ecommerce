@@ -73,9 +73,14 @@ def register(request):
         form =UserRegistrationForm()
         
 
-    return render(request, 'registrations/register.html', {'form': form})
+    return render(request, 'registration/register.html', {'form': form})
 
 
+
+
+
+
+#To search the product
 def search_product(request):
     query = request.GET.get('search')
     if query:

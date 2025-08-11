@@ -43,6 +43,7 @@
           <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
         </li>
       </ul>
+      
       <form method ="get" action="{% url "search_product" %}" class="d-flex">
         {% csrf_token %}
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="search" id="search">
@@ -51,6 +52,10 @@
       <a href="{% url "product_list" %}" class="btn btn-primary">HomePage</a>
       
       {% if user.is_authenticated %}
+      <form action="" method="get">
+        {% csrf_token %}
+        {{user.username}}
+        </form>
       
       <form action="{% url 'logout' %}" method="post">
         {% csrf_token %}
