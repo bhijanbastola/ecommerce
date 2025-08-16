@@ -29,9 +29,7 @@
                 {% if product.user == user %}
                 <a href="{% url 'edit_product' product.id %}" class="btn btn-secondary">Edit</a>
                 <a href="{% url 'delete_product' product.id %}" class="btn btn-danger">Delete</a>
-                {% comment %} <a href="{% url 'product_delete
-                
-                {% comment %} <a href="{% url 'product_list' product.id %}" class="btn btn-primary">View Details</a> {% endcomment %}
+               
                  {% endif %}
             </div>
         </div>
